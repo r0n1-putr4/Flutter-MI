@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_2b/stateless_statefull/statefull_page.dart';
-import 'package:flutter_2b/stateless_statefull/stateless_page.dart';
+
+import '../stless_stfull/statefull_page.dart';
+import '../stless_stfull/stateless_page.dart';
 
 class DrawerMenuPage extends StatelessWidget {
   const DrawerMenuPage({super.key});

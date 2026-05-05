@@ -1,4 +1,8 @@
+import 'package:belajar_flutter_mi2c/form/form_nilai_mhs_page.dart';
 import 'package:flutter/material.dart';
+
+import '../data/grid_view_page.dart';
+import '../data/list_view_page.dart';
 
 class BottomNavBarPage extends StatefulWidget {
   const BottomNavBarPage({super.key});
@@ -19,7 +23,7 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> {
   static final List<Widget> _halaman = [
     GridViewPage(),
     ListViewPage(),
-    FormNilaiPage(),
+    FormNilaiMhsPage(),
   ];
 
   @override
