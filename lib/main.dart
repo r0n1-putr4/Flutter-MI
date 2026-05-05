@@ -3,9 +3,12 @@ import 'package:belajar_flutter_mi2c/form/form_nilai_mhs_page.dart';
 import 'package:belajar_flutter_mi2c/layout/column_page.dart';
 import 'package:belajar_flutter_mi2c/layout/row_page.dart';
 import 'package:belajar_flutter_mi2c/layout/stack_page.dart';
+import 'package:belajar_flutter_mi2c/map/single_map_page.dart';
 import 'package:belajar_flutter_mi2c/stless_stfull/statefull_page.dart';
 import 'package:belajar_flutter_mi2c/stless_stfull/stateless_page.dart';
 import 'package:belajar_flutter_mi2c/style_text_icon/style_page.dart';
+import 'package:belajar_flutter_mi2c/uts/tipe_a/dashboard_pasien_page.dart';
+import 'package:belajar_flutter_mi2c/uts/tipe_b/dashboard_penginapan_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -38,7 +41,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const FormNilaiMhsPage(),
+      home: const DashboardPasienPage(),
       debugShowCheckedModeBanner: false,
     );
   }
