@@ -12,11 +12,32 @@ class _SingleMapPageState extends State<SingleMapPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GoogleMap(
-        initialCameraPosition: CameraPosition(
-          target: LatLng(-0.9472813143938821, 100.36326840320734),
-          zoom: 14
-        ),
+      body: Stack(
+        children: [
+          GoogleMap(
+            initialCameraPosition: CameraPosition(
+              target: LatLng(-0.9472813143938821, 100.36326840320734),
+              zoom: 14,
+            ),
+          ),
+          Positioned(
+            top: 50,
+            right: 10,
+            child: Material(
+              color: Colors.transparent,
+              child: PopupMenuButton(
+                onSelected: (val) {},
+                itemBuilder: (context) => [
+                  PopupMenuItem(
+                    value: "gambar",
+                    child: Text("Menampilkan Gambar"),
+                  ),
+                  PopupMenuItem(value: "appbar", child: Text("App Bar")),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
