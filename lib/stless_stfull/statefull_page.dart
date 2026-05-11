@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widget_previews.dart';
 
 class StatefullPage extends StatefulWidget {
+  @Preview(
+      name: 'Roni',
+      textScaleFactor: 2.0,
+      brightness: Brightness.light
+  )
   const StatefullPage({super.key});
 
   @override

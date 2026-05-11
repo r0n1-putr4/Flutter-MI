@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widget_previews.dart';
 
 class FormNilaiMhsPage extends StatefulWidget {
+  @Preview(
+      name: 'Roni',
+      textScaleFactor: 1.0,
+      brightness: Brightness.light
+  )
+
   const FormNilaiMhsPage({super.key});
 
   @override
