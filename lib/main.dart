@@ -6,6 +6,7 @@ import 'package:belajar_flutter_mi2c/layout/row_page.dart';
 import 'package:belajar_flutter_mi2c/layout/stack_page.dart';
 import 'package:belajar_flutter_mi2c/map/custom_map.dart';
 import 'package:belajar_flutter_mi2c/map/map_multi_markers_page.dart';
+import 'package:belajar_flutter_mi2c/map/modal_map_page.dart';
 import 'package:belajar_flutter_mi2c/map/single_map_page.dart';
 import 'package:belajar_flutter_mi2c/stless_stfull/statefull_page.dart';
 import 'package:belajar_flutter_mi2c/stless_stfull/stateless_page.dart';
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const KategoriPage(),
+      home: const ModalMapPage(),
       debugShowCheckedModeBanner: false,
     );
   }
