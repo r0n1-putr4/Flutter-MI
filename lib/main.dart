@@ -1,3 +1,4 @@
+import 'package:belajar_flutter_mi2c/api/kategori_page.dart';
 import 'package:belajar_flutter_mi2c/app_bar/app_bar_page.dart';
 import 'package:belajar_flutter_mi2c/form/form_nilai_mhs_page.dart';
 import 'package:belajar_flutter_mi2c/layout/column_page.dart';
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const CustomMap(),
+      home: const KategoriPage(),
       debugShowCheckedModeBanner: false,
     );
   }
