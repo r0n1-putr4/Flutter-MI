@@ -1,3 +1,4 @@
+import 'package:belajar_flutter_mi2c/api/makanan_page.dart';
 import 'package:flutter/material.dart';
 import 'models/model_categories.dart';
 import 'package:http/http.dart' as http;
@@ -54,34 +55,40 @@ class _KategoriPageState extends State<KategoriPage> {
               itemCount: _categories.length,
               itemBuilder: (context, index) {
                 Category itemCategori = _categories[index];
-                return Card(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Expanded(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.vertical(
-                            top: Radius.circular(10),
-                          ),
-                          child: Image(
-                            image: NetworkImage(itemCategori.strCategoryThumb),
-                            width: double.infinity,
-                            height: 100,
-                            fit: BoxFit.cover,
+                return GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_)=>MakananPage(itemCategori)));
+                  },
+                  child: Card(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(10),
+                            ),
+                            child: Image(
+                              image: NetworkImage(itemCategori.strCategoryThumb),
+                              width: double.infinity,
+                              height: 100,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
-                      ),
 
-                      Padding(
-                        padding: const EdgeInsets.all(6),
-                        child: Text(
-                          "Kategori : ${itemCategori.strCategory}",
-                          maxLines: 1,
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                        Padding(
+                          padding: const EdgeInsets.all(6),
+                          child: Text(
+                            "Kategori : ${itemCategori.strCategory}",
+                            maxLines: 1,
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 10),
-                    ],
+                        SizedBox(height: 10),
+                      ],
+                    ),
                   ),
                 );
               },
