@@ -13,27 +13,27 @@ class _GridViewPageState extends State<GridViewPage> {
   List<Map<String, dynamic>> listBarang = [
     {
       "gambar":
-          "https://down-id.img.susercontent.com/file/id-11134207-8224v-mhc82koswoi077.webp",
+      "https://down-id.img.susercontent.com/file/id-11134207-8224v-mhc82koswoi077.webp",
       "nama_barang":
-          "PC Gaming 5 Jutaan Ultra Smooth 1080p | i3 12100F GTX 1650 RAM 16GB SSD 128GB HDD 500GB | ECS PRO",
+      "PC Gaming 5 Jutaan Ultra Smooth 1080p | i3 12100F GTX 1650 RAM 16GB SSD 128GB HDD 500GB | ECS PRO",
       "harga": "Rp5.979.000",
       "terjual": "115",
       "rating": 5.0,
       "alamat": "KAB. WONOSOBO",
       "deskripsi":
-          "EXCO COMPUTER STORE adalah spesialis PC Rakitan dan PC Siap Pakai (PC Only) untuk berbagai kebutuhan digital modern.",
+      "EXCO COMPUTER STORE adalah spesialis PC Rakitan dan PC Siap Pakai (PC Only) untuk berbagai kebutuhan digital modern.",
     },
     {
       "gambar":
-          "https://down-id.img.susercontent.com/file/sg-11134201-7rd6o-m7uh3kt4s09967.webp",
+      "https://down-id.img.susercontent.com/file/sg-11134201-7rd6o-m7uh3kt4s09967.webp",
       "nama_barang":
-          "Lenovo Komputer Full PC All-in-One Baru Terbaru HD Super Tipis Intel Core i3/i5/i7 Untuk Rumah, Belajar, Kantor, Gaming dan Hiburan",
+      "Lenovo Komputer Full PC All-in-One Baru Terbaru HD Super Tipis Intel Core i3/i5/i7 Untuk Rumah, Belajar, Kantor, Gaming dan Hiburan",
       "harga": "Rp7.583.333",
       "terjual": "4.6Rb",
       "rating": 4.8,
       "alamat": "KOTA JAKARTA UTARA",
       "deskripsi":
-          "Komputer all-in-one Intel i3/i5/i7 baru, Hadiah gratis dengan pesanan: keyboard + keyboard",
+      "Komputer all-in-one Intel i3/i5/i7 baru, Hadiah gratis dengan pesanan: keyboard + keyboard",
     },
     {
       "gambar":
