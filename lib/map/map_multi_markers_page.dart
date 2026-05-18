@@ -107,7 +107,6 @@ class _MapMultiMarkersPageState extends State<MapMultiMarkersPage> {
                     setState(() {
                       _mapType = MapType.satellite;
                     });
-
                   },
                   materialTapTargetSize: MaterialTapTargetSize.padded,
                   backgroundColor: Colors.green,
@@ -119,13 +118,11 @@ class _MapMultiMarkersPageState extends State<MapMultiMarkersPage> {
                     setState(() {
                       _mapType = MapType.normal;
                     });
-
                   },
                   materialTapTargetSize: MaterialTapTargetSize.padded,
                   backgroundColor: Colors.green,
                   child: Icon(Icons.map, size: 36, color: Colors.white),
                 ),
-
               ],
             ),
           ),
