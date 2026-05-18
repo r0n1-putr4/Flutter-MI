@@ -9,35 +9,20 @@ class SingleMapPage extends StatefulWidget {
 }
 
 class _SingleMapPageState extends State<SingleMapPage> {
+  final koordinat = LatLng(-0.9406786430307693, 100.43324888237404);
+
+  Set<Marker> marker = {};
+  Set<Marker> _singleMarker() {
+    marker.add(Marker(markerId: MarkerId("lokasi01"), position: koordinat,infoWindow: InfoWindow(title: "Cupak Tangah",snippet: "Padang, Sumatera Barat")));
+    return marker;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          GoogleMap(
-            initialCameraPosition: CameraPosition(
-              target: LatLng(-0.9472813143938821, 100.36326840320734),
-              zoom: 14,
-            ),
-          ),
-          Positioned(
-            top: 50,
-            right: 10,
-            child: Material(
-              color: Colors.transparent,
-              child: PopupMenuButton(
-                onSelected: (val) {},
-                itemBuilder: (context) => [
-                  PopupMenuItem(
-                    value: "gambar",
-                    child: Text("Menampilkan Gambar"),
-                  ),
-                  PopupMenuItem(value: "appbar", child: Text("App Bar")),
-                ],
-              ),
-            ),
-          ),
-        ],
+      body: GoogleMap(
+        initialCameraPosition: CameraPosition(target: koordinat, zoom: 13),
+        markers: _singleMarker(),
       ),
     );
   }

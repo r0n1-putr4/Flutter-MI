@@ -32,7 +32,21 @@
   <title>belajar_flutter_mi2c</title>
   <link rel="manifest" href="manifest.json">
   <script async
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBE7Et97YfUS_yLF4pJBGaUttuWArYpY8s&callback=initMap">
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBE7Et97YfUS_yLF4pJBGaUttuWArYpY8s">
+  </script>
+  <script>
+    {{flutter_js}}
+    {{flutter_build_config}}
+
+    _flutter.loader.load({
+      config: {
+        renderer: "html", // Memaksa penggunaan HTML renderer untuk mengatasi CORS
+      },
+      onEntrypointLoaded: async function(engineInitializer) {
+        const appRunner = await engineInitializer.initializeEngine();
+        await appRunner.runApp();
+      }
+    });
   </script>
 </head>
 <body>
