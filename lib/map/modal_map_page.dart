@@ -54,14 +54,14 @@ class _ModalMapPageState extends State<ModalMapPage> {
       builder: (context) {
         return Container(
           padding: const EdgeInsets.all(16),
-          height: 400,
+          height: 380,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 title,
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                maxLines: 2,
+                maxLines: 1,
               ),
 
               Text(
@@ -73,10 +73,20 @@ class _ModalMapPageState extends State<ModalMapPage> {
               const SizedBox(height: 10),
 
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
-                  Icon(Icons.star, color: Colors.orange),
+                  Expanded(
+                    child: Row(
+                      children: [
+                        Icon(Icons.star, color: Colors.orange),
+                        SizedBox(width: 5),
+                        Text("4.3"),
+                      ],
+                    ),
+                  ),
+
                   SizedBox(width: 5),
-                  Text("4.3"),
+                  Text("Rp. 300.000"),
                 ],
               ),
 
