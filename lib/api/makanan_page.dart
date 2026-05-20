@@ -12,14 +12,19 @@ class MakananPage extends StatefulWidget {
 }
 
 class _MakananPageState extends State<MakananPage> {
-  late Future<List<Meal>?> _dataMeal;
+  late Future<List<Meal>?> _dataMeal;// Data Akan Kita Load
+  List<Meal> allMeal = [];// Variable akan menyimpan data Response
 
   Future<List<Meal>?> _getDataMeal() async {
     try {
       http.Response hasilResponse = await http.get(
         Uri.parse("https://www.themealdb.com/api/json/v1/1/filter.php?c=${widget._category.strCategory}"),
       );
-      return modelMealsFromJson(hasilResponse.body).meals;
+      final _hasilResponse = modelMealsFromJson(hasilResponse.body);
+
+      allMeal = _hasilResponse.meals ?? [];
+      return allMeal;
+
     } catch (e) {
       ScaffoldMessenger.of(
         context,
@@ -32,6 +37,7 @@ class _MakananPageState extends State<MakananPage> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    // Cara Memanggil data jika saat di RUN
     _dataMeal = _getDataMeal();
   }
 
@@ -51,14 +57,13 @@ class _MakananPageState extends State<MakananPage> {
           } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
             return Center(child: Text("Tidak ada data berita"));
           } else {
-            List<Meal> _meal = snapshot.data!;
             return GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
               ),
-              itemCount: _meal.length,
+              itemCount: snapshot.data!.length,
               itemBuilder: (context, index) {
-                Meal itemMeal = _meal[index];
+                Meal itemMeal = snapshot.data![index];
                 return Card(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
