@@ -1,7 +1,7 @@
-// To parse this JSON data, do
+//  To parse this JSON data, do
 //
-//     final modelCategories = modelCategoriesFromJson(jsonString);
-
+//  final modelCategories = modelCategoriesFromJson(jsonString);
+//  Kode tersebut berfungsi untuk mengubah data JSON menjadi object Dart
 import 'dart:convert';
 
 ModelCategories modelCategoriesFromJson(String str) => ModelCategories.fromJson(json.decode(str));
