@@ -1,4 +1,6 @@
 import 'package:belajar_flutter_mi2c/api/kategori_page.dart';
+import 'package:belajar_flutter_mi2c/api/providers/meal_provider.dart';
+import 'package:belajar_flutter_mi2c/api/views/meal_page.dart';
 import 'package:belajar_flutter_mi2c/app_bar/app_bar_page.dart';
 import 'package:belajar_flutter_mi2c/form/form_nilai_mhs_page.dart';
 import 'package:belajar_flutter_mi2c/layout/column_page.dart';
@@ -14,9 +16,15 @@ import 'package:belajar_flutter_mi2c/style_text_icon/style_page.dart';
 import 'package:belajar_flutter_mi2c/uts/tipe_a/dashboard_pasien_page.dart';
 import 'package:belajar_flutter_mi2c/uts/tipe_b/dashboard_penginapan_page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_) => MealProvider())],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -45,7 +53,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const SingleMapPage(),
+      home: const MealPage(),
       debugShowCheckedModeBanner: false,
     );
   }
