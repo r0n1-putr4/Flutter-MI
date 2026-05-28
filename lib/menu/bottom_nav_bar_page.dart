@@ -18,6 +18,7 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> {
     setState(() {
       _pilBottomNav = index;
     });
+
   }
 
   static final List<Widget> _halaman = [
