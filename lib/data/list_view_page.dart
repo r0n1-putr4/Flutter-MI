@@ -126,6 +126,8 @@ class _ListViewPageState extends State<ListViewPage> {
                               children: [
                                 Text(
                                   itemBerita["judul"],
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
